@@ -1,0 +1,235 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+// Variables
+@import 'variables';
+
+$primary : #5842E3;
+$warning : #807514;
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~sweetalert2/src/sweetalert2.scss';
+
+body {
+  font-size: 15px;
+  background-color: #ededf5;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+i {
+  font-size: 18px;
+}
+
+a {
+  color: black;
+  transition: all 0.3s ease-in;
+
+    &:hover {
+      color: $primary;
+    }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.card {
+  border-radius: 8px;
+}
+
+.auth__btn {
+  padding: 12px 35px;
+  background: $primary;
+  color: white;
+  border: 2px solid $primary;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: $primary;
+    background: white;
+  }
+}
+
+.auth__theme {
+  .register {
+    font-size: 18px;
+  }
+
+  .auth__password {
+    position: relative;
+  }
+
+  i {
+    position: absolute;
+    top: 43px;
+    right: 20px;
+    color: rgb(190, 190, 190);
+    cursor: pointer;
+  }
+
+  i.active {
+    color: black;
+  }
+}
+
+.auth__register {
+  margin-top: 25px;
+}
+
+/* Header__Menu */
+.header__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: white;
+
+  .header__height {
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+
+  i {
+    margin-top: 5px;
+  }
+}
+
+/* Bottom__Menu */ 
+.bottom__menu{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 999;
+
+  p {
+    margin-bottom: 14px;
+  }
+
+  i {
+    margin-top: 14px;
+  }
+}
+
+/* Content */ 
+.content {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+/* Profile */ 
+.account__img {
+  img {
+    border-radius: 100%;
+    padding: 4px;
+    border: 1px solid #ddd;
+    background-color: white;
+  }
+}
+
+/* update password */ 
+.update_password {
+  img {
+    width: 220px;
+    height: 220px;
+  }
+}
+/* wallet */
+.wallet{
+  span {
+    font-size: 12px;
+  }
+}
+
+/* Home */ 
+.home {
+  .user_img {
+    border-radius: 100%;
+    padding: 4px;
+    border: 1px solid #ddd;
+    background-color: white;
+  }
+
+  .features {
+    img {
+      width: 24px;
+    }
+  }
+
+  .main__card {
+    img {
+      width: 37px;
+    }
+  }
+}
+
+/* Scan Circle */ 
+.scan__circle {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 45px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #ededf5;
+  border-radius: 100%;
+  z-index: 1000;
+
+  .inside {
+    width: 52px;
+    height: 52px;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    animation: glow 3s infinite;
+
+    i {
+      color: white; 
+    }
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 -10px $primary;
+  }
+  25% {
+    box-shadow: 0 0 8px $primary;
+  }
+  50% {
+    box-shadow: 0 0 15px $primary;
+  }
+  75% {
+    box-shadow: 0 0 8px $primary;
+  }
+  100% {
+    box-shadow: 0 0 -10px $primary;
+  }
+}
+
+.noti_badge {
+  position: absolute;
+  top: -2px;
+  left: 26px;
+}
